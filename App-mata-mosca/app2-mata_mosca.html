@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mata Mosca</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+
+    <!--Inclusão do Java Script diretamento no código
+    <script></script>-->
+    <!----------------------ou------------------------->
+
+    <!--Inclusão do Java Script a partir de um arquivo-->
+    <script src="jogo.js"></script>
+    <!------------------------------------------------->
+  </head>
+  <body onresize="ajustaTamanho()">
+
+    <!--PAINEL-->
+    <div class="painel">
+      <!--VIDAS-->
+      <div class="vidas">
+        <img id="v1" src="../App-mata-mosca/imagens/coracao_cheio.png">
+        <img id="v2" src="../App-mata-mosca/imagens/coracao_cheio.png">
+        <img id="v3" src="../App-mata-mosca/imagens/coracao_cheio.png">
+      </div>
+    <!--------------------------------->
+
+      <!--TEMPO-->
+      <div class="cronometro">
+        Tempo restante: <span id="cronometro"></span><!--ao criamos o id cronometro, podemos incluir aqui no documento a função realizada no java para que haja o decréscimo do tempo com o passar do tempo.-->
+      </div>
+    <!--------------------------------->
+    </div>
+
+    
+    <script>
+      //adicionamos o possicaoRandomica() dentro do set interval o que significa que acada período de tempo toda aquela função será reproduzida novamente.
+      //A var criaMosca serve para que quando a pessoa atingir a vitória o setInterval pare de produzir moscas.
+      var criaMosca = setInterval(function(){ 
+        posicaoRandomica()
+      }, tempoMosca)
+    </script>
+  </body>
+</html>

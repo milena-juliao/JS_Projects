@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Mata Mosca</title>
+		<meta charset="utf-8">
+
+		<!-- Bootstrap CSS -->
+		    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+		    <link rel="stylesheet" type="text/css" href="estilo.css">
+
+		    <!--Inclusão do Java Script diretamento no código-->
+		    <script>
+
+			//Iniciar Jogo
+				function iniciarJogo(){
+					var nivel = document.getElementById('nivel').value
+
+					if (nivel === '') {
+						alert('Selecione um nível meu matador de moscas!!')
+						return false
+					}
+
+					window.location.href = "app2-mata_mosca.html?" + nivel
+				}
+		    </script>
+	    <!----------------------ou------------------------->
+
+	    <!--Inclusão do Java Script a partir de um arquivo-->
+	    <!---script src="jogo.js"></script>-->
+	    <!------------------------------------------------->
+	</head>
+	<body>
+		<div class="container">
+			<!--ESCRITO VITORIA-->
+			<div class="row">
+				<div class="col">
+					<div class="d-flex justify-content-center">
+						<img src="../App-mata-mosca/imagens/game.png">
+					</div>
+				</div>
+			</div>
+			<!------------------------------------------------------>
+			<!--BOTÃO NÍVEL-->
+			<div class="row">
+				<div class="col">
+					<div class="d-flex justify-content-center">
+						<div class="mb-2">
+							<select id="nivel" class="form-control">
+								<option value="">Selecione o nível</option>
+								<option value="normal">Normal</option>
+								<option value="dificil">Difícil</option>
+								<option value="baygon">Modo Baygon</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!------------------------------------------------------>
+
+			<!--BOTÃO REINICIAR-->
+			<div class="row">
+				<div class="col">
+					<div class="d-flex justify-content-center">
+						<button type="button" class="btn btn-danger btn-lg" onclick="iniciarJogo()">Iniciar</button>
+					</div>
+				</div>
+			</div>
+			<!------------------------------------------------------>
+		</div>
+
+	</body>
+</html>
